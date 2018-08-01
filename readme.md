@@ -1,4 +1,4 @@
-# 微信小程序支持async/await
+# 微信小程序
 
 * babel编译
 * gulp构建

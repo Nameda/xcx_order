@@ -1,12 +1,28 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index1/index1"
+    "pages/orders/index",
+    "pages/mine/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "卡布达的小程序",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"首页"
+    },{
+      "pagePath":"pages/orders/index",
+      "text":"订单"
+    },{
+      "pagePath":"pages/mine/index",
+      "text":"我的"
+    }],
+    "color":"#333",
+    "selectedColor":"orange",
+    "backgroundColor":"#fff"
   }
 }
