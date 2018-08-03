@@ -13,16 +13,23 @@
   "tabBar":{
     "list":[{
       "pagePath":"pages/index/index",
-      "text":"首页"
+      "text":"首页",
+      "iconPath":"imgs/toolbar/index.png",
+      "selectedIconPath":"imgs/toolbar/index1.png"
     },{
       "pagePath":"pages/orders/index",
-      "text":"订单"
+      "text":"订单",
+      "iconPath":"imgs/toolbar/order.png",
+      "selectedIconPath":"imgs/toolbar/order1.png"
     },{
       "pagePath":"pages/mine/index",
-      "text":"我的"
+      "text":"我的",
+      "iconPath":"imgs/toolbar/mine.png",
+      "selectedIconPath":"imgs/toolbar/mine1.png"
     }],
     "color":"#333",
-    "selectedColor":"orange",
-    "backgroundColor":"#fff"
+    "selectedColor":"#f07c0d",
+    "backgroundColor":"#f1f1f1",
+    "borderStyle":"white"
   }
 }
