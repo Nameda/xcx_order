@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/orders/index",
-    "pages/mine/index"
+    "pages/orders/order",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,12 +17,12 @@
       "iconPath":"imgs/toolbar/index.png",
       "selectedIconPath":"imgs/toolbar/index1.png"
     },{
-      "pagePath":"pages/orders/index",
+      "pagePath":"pages/orders/order",
       "text":"订单",
       "iconPath":"imgs/toolbar/order.png",
       "selectedIconPath":"imgs/toolbar/order1.png"
     },{
-      "pagePath":"pages/mine/index",
+      "pagePath":"pages/mine/mine",
       "text":"我的",
       "iconPath":"imgs/toolbar/mine.png",
       "selectedIconPath":"imgs/toolbar/mine1.png"
