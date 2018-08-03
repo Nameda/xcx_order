@@ -57,7 +57,7 @@
 }
 .weui-cell.weui-cell_access{
   display: flex;
-  padding: 46rpx;
+  padding: 45rpx;
   border-bottom: 1rpx solid #ccc;
   margin: 0 28rpx 0 28rpx;
 }
