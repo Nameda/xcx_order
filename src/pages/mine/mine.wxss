@@ -37,8 +37,8 @@
 
 .weui-cell__ed image {
   vertical-align: right;
-  width: 20rpx;
-  height: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
 
 .weui-cells::after{
@@ -57,7 +57,7 @@
 }
 .weui-cell.weui-cell_access{
   display: flex;
-  padding: 45rpx;
+  padding: 20rpx;
   border-bottom: 1rpx solid #ccc;
   margin: 0 28rpx 0 28rpx;
 }
