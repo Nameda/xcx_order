@@ -1,12 +1,45 @@
 <!--index.wxml-->
 <view class="index">
+  <!-- 轮播图 -->
   <swiper class="swiper" circular="true" autoplay="true" interval="3000" duration="1000" previous-margin="96rpx" next-margin="96rpx">  
       <block wx:for="{{movies}}" wx:key="index">  
-        <swiper-item>  
+        <swiper-item class="swiper-item">  
           <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
         </swiper-item>  
       </block>  
     </swiper> 
-
+  <!-- 搜索框 -->
+  <view class="searchBox">
+    <view class="seachIcon"><image src="../../imgs/index/search.png"></image></view>
+    <view class="seachTxt">成都市天府新区成都市天府新区成都市天府新区成都市天府新区</view>
+  </view>
+  <!-- 门店列表 -->
+  <view class="storeBox">
+    <view class="storeTabs">
+      <view class="{{currentTab==1 ? 'on' :''}}  storeTab" bindtap="changeTab" data-type="1">
+        <text>定位附近门店</text>
+        <image src="../../imgs/index/coor_select.png" wx:if="{{currentTab == 1}}"></image>
+        <image src="../../imgs/index/coor.png" wx:else></image>
+      </view>
+      <view class="{{currentTab==2 ? 'on' :''}}  storeTab" bindtap="changeTab" data-type="2">
+        <text>收藏的门店</text>
+        <image src="../../imgs/index/collect_select.png" wx:if="{{currentTab == 2}}"></image>        
+        <image src="../../imgs/index/collect.png" wx:else></image>
+      </view>
+    </view>
+    <view class="storeListBox">
+      <view wx:for="{{storeList}}" wx:key="index" class="storeList {{currentStore == index ? 'on':''}}" bindtap="chooseStore" data-index="{{index}}">
+        <view class="storeName"><image src="../../imgs/index/adIcon.png" class="adIcon"  wx:if="{{currentStore == index}}"></image>{{item.name}}</view>
+        <view class="distance">{{item.distance}}KM</view>
+        <view class="address">{{item.address}}</view>
+        <view class="showPart" wx:if="{{currentStore == index}}">
+          <view class="chooseTxt">选择饮品</view>
+          <image src="../../imgs/index/collect_select.png" wx:if="{{item.isSelect}}"></image>
+          <image src="../../imgs/index/collect.png" wx:else></image>
+        </view>
+      </view>
+      <view class="noMore">没有更多啦~</view>
+    </view>
+  </view>
 
 </view>

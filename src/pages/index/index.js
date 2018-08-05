@@ -12,6 +12,34 @@ Page({
       url:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533273936332&di=16606d497b212ae1ff5076ef1615b27d&imgtype=0&src=http%3A%2F%2Fscimg.jb51.net%2Fallimg%2F161201%2F106-161201101A5946.jpg'
     },{
       url:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533274291381&di=ed091a0c5769f09e229f37d0093a5ccc&imgtype=0&src=http%3A%2F%2Fimg06.tooopen.com%2Fimages%2F20170221%2Ftooopen_sy_199240913125.jpg'
+    }],
+    currentTab:1,
+    currentStore:0,
+    storeList:[{
+      name:'卡布达的奶茶店',
+      distance:0.1,
+      address:'四川省成都市三江镇啦啦啦啦',
+      isSelect:false
+    },{
+      name:'卡布达的奶茶店',
+      distance:0.2,
+      address:'四川省成都市三江镇啦啦啦啦',
+      isSelect:true
+    },{
+      name:'卡布达的奶茶店',
+      distance:0.3,
+      address:'四川省成都市三江镇啦啦啦啦',
+      isSelect:false
+    },{
+      name:'卡布达的奶茶店',
+      distance:0.4,
+      address:'四川省成都市三江镇啦啦啦啦',
+      isSelect:true
+    },{
+      name:'卡布达的奶茶店',
+      distance:0.5,
+      address:'四川省成都市三江镇啦啦啦啦',
+      isSelect:false
     }]
   },
   //事件处理函数
@@ -20,5 +48,25 @@ Page({
   },
   onLoad() {
     // getArticleList()
+  },
+  changeTab:function(event){
+    var type = event.currentTarget.dataset['type'];
+    if(type !== this.data.currentTab){
+      this.setData({
+        currentTab:type
+      })
+      //列表数据处理
+      if(type==1){
+        //请求所有数据
+      }else if(type==2){
+        //请求收藏数据
+      }
+    }
+  },
+  chooseStore:function(event){
+    var index = event.currentTarget.dataset['index'];
+    this.setData({
+      currentStore:index
+    })
   }
 })
