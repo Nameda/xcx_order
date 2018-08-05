@@ -1,0 +1,14 @@
+.useNotice{
+  margin: 53rpx 38rpx auto 38rpx;
+  font-size: 24rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 41rpx 45rpx 31rpx 20rpx;
+}
+.normalQuestion{
+  margin: 38rpx 38rpx auto 38rpx;
+  font-size: 24rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 41rpx 45rpx 31rpx 20rpx;
+}

@@ -1,15 +1,8 @@
-<!--index.wxml
-<view class="index">
-    这是我的页面
-</view>-->
 <view class="mine-wrapper">
-  <view class="avatar-wrapper">
-    <view>
-      <view class="text">
-        <text wx:if="{{userinfo.nickName}}">{{userinfo.nickName}}</text>
-        <text wx:else bindtap="toLogin">注册 / 登录</text>
-      </view>
-    </view>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" wx:if="userInfo.avatarUrl"></image>
+    <view class="userinfo-avatar" wx:else></view>
+    <text class="userinfo-nickname">{{userInfo.nickName? userInfo.nickName : '未登录'}}</text>
   </view>
   <view class="list-wrapper">
     <view class="weui-cells weui-cells_after-title">

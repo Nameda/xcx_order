@@ -1,44 +1,39 @@
-/**orders.wxss
-.orders {
-    font-size: 64rrpx;
-    font-weight: bold;
-    color: #eeaddd;
-}**/
-.avatar-wrapper {
-  padding: 25rpx 0;
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.avatar-wrapper .avatar {
-  margin: 0 auto;
-  text-align: center;
+.userinfo-avatar {
+  width: 236rpx;
+  height: 236rpx;
+  margin-top: 80rpx;
+  background-color: #fff;
+  border-radius: 50%;
 }
-
-.avatar-wrapper .avatar image {
-  width: 100rpx;
-  height: 100rpx;
-}
-
-.avatar-wrapper .text {
-  text-align: center;
-  color: #fff;
+.userinfo-nickname {
+  margin-top: 34rpx;
+  color: #000;
+  font-size: 32rpx;
 }
 
 .weui-cell__hd image {
-  margin-right: 15rpx;
-  vertical-align: left;
-  width: 60rpx;
-  height: 60rpx;
+  margin-right: 17rpx;
+  vertical-align: middle;
+  width: 55rpx;
+  height: 55rpx;
 }
 
 .weui-cell__bd {
   vertical-align: middle;
   flex: 1;
+  font-size: 30rpx;
 }
 
 .weui-cell__ed image {
   vertical-align: right;
-  width: 20rpx;
-  height: 20rpx;
+  width: 45rpx;
+  height: 37rpx;
 }
 
 .weui-cells::after{
@@ -52,14 +47,16 @@
 
 .weui-cells_after-title{
   background: #fff;
-  margin: 20rpx 8rpx auto 4rpx;
-  border-radius: 7rpx;
+  margin: 72rpx 28rpx auto 28rpx;
+  border-radius: 15rpx;
 }
 .weui-cell.weui-cell_access{
   display: flex;
-  padding: 45rpx;
+  height:138rpx;
   border-bottom: 1rpx solid #ccc;
-  margin: 0 28rpx 0 28rpx;
+  margin: auto 46rpx;
+  align-items:center;
+  vertical-align:middle;
 }
 .weui-cell.weui-cell_access:last-child{
   border: 0 none;

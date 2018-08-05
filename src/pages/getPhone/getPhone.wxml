@@ -1,0 +1,9 @@
+<view class="phone-wrapper">
+  <view class="info">
+  <image class="avatar" src="{{avatarUrl}}" background-size="cover"></image>
+  <text class="itemName">某某某</text>
+  </view>
+  <view class="content">
+      <view class="triangle"></view>“某某”申请获取你的手机号</view>
+  <button class="agree" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">同意</button>
+</view>
