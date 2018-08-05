@@ -1,45 +1,43 @@
 var regeneratorRuntime = require("../../lib/runtime.js");//index.js
-//获取应用实例
-// Page({
-//   data: {
-//
-//   },
-//   //事件处理函数
-//   bindViewTap() {
-//
-//   },
-//   onLoad() {
-//
-//   }
-// })
-var _app = getApp();
+var app = getApp();
 Page({
     /**
      * 页面的初始数据
      */
     data: {
+        userInfo: {},
         menuitems: [
-            { text: '我的优惠', url: '@', icon: '../../imgs/toolbar/mine/coupons.png', iconEnd: '../../imgs/toolbar/mine/next.png' },
-            { text: '13233', url: '@', icon: '../../imgs/toolbar/mine/phone.png', iconEnd: '../../imgs/toolbar/mine/next.png' },
-            { text: '平台须知', url: '@', icon: '../../imgs/toolbar/mine/notice.png', iconEnd: '../../imgs/toolbar/mine/next.png' }
+            { text: '我的优惠', url: '@', icon: '../../imgs/mine/coupons.png', iconEnd: '../../imgs/mine/next.png' },
+            { text: '', url: '../getPhone/getPhone', icon: '../../imgs/mine/phone.png', iconEnd: '../../imgs/mine/next.png' },
+            { text: '平台须知', url: '../notice/notice', icon: '../../imgs/mine/notice.png', iconEnd: '../../imgs/mine/next.png' }
         ]
     },
-    /**
-     * 生命周期函数--监听页面加载
-     * onLoad: function (options) {
-        let that = this;
-        _app.getUserInfo(function (userinfo) {
-            console.log(userinfo);
-            console.log(getApp().globalData.userSign);
-            that.setData({
-                userinfo: userinfo,
-                userSign: getApp().globalData.userSign
-            });
-        });
+    onLoad: function () {
+        console.log('onLoad')
+        var that = this;
+        // 获取用户信息
+        wx.getSetting({
+            success: res => {
+            if (res.authSetting['scope.userInfo']) {
+                // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+                wx.getUserInfo({
+                success: res => {
+                    // 可以将 res 发送给后台解码出 unionId
+                    console.log(res.userInfo);
+                    that.setData({
+                        userInfo : res.userInfo
+                    })
+                    // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+                    // 所以此处加入 callback 以防止这种情况
+                    if (this.userInfoReadyCallback) {
+                    this.userInfoReadyCallback(res)
+                    }
+                }
+                })
+            }
+            }
+        })
     },
-     */
-
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

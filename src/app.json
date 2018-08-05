@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/mine/mine",
+    "pages/getPhone/getPhone",
+    "pages/notice/notice",
     "pages/index/index",
-    "pages/orders/order",
-    "pages/mine/mine"
+    "pages/orders/order"
   ],
   "window": {
     "backgroundTextStyle": "light",

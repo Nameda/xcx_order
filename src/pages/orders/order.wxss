@@ -1,6 +1,22 @@
 /**orders.wxss**/
-.orders {
+/* .orders {
     font-size: 64rpx;
     font-weight: bold;
     color: #ada;
-  }
+} */
+.nonOrder{
+  height: 284rpx;
+  background-color: #fff;
+  margin: 54rpx 38rpx auto 38rpx;
+  font-size: 30rpx;
+  border-radius: 15rpx;
+  line-height: 284rpx;
+  text-align: center;
+}
+.startOrder{
+  height: 86rpx;
+  margin: 88rpx 38rpx auto 38rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #f07c0d;
+}

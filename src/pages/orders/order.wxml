@@ -1,4 +1,32 @@
-<!--index.wxml-->
 <view class="orders">
-  这是订单页
+  <view wx:if="{{orders}}">
+    <block wx:for="{{orders}}" wx:key="index">
+      <view class="order">
+        <view>
+          <text>下单时间：{{item.orderTime}}</text>
+          <text class="orderState">{{item.state}}</text>
+        </view>
+        <view>
+          <text>门店名称：{{item.storeName}}</text>
+        </view>
+        <view>
+          <text>取单时间：{{item.getOrderTime}}</text>
+        </view>
+        <view>
+          <text>订单类型：{{item.orderType}}</text>
+          <text class="orderNum">取单号：{{item.orderNum}}</text>
+        </view>
+        <view>
+          <text>{{item.price}}</text>
+          <button class="orderDetail">查看详情</button>
+        </view>
+      </view>
+    </block>
+  </view>
+  <block wx:else>
+    <view class="nonOrder">
+      <text>暂无订单信息</text>
+    </view>
+    <button class="startOrder">开 始 点 单</button>
+  </block>
 </view>
