@@ -20,3 +20,58 @@
   color: #fff;
   background-color: #f07c0d;
 }
+.order{
+  height: 356rpx;
+  margin: 34rpx 38rpx auto 38rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 50rpx 49rpx 28rpx 56rpx;
+  font-size: 24rpx;
+}
+.orderState{
+  margin-left: 166rpx;
+  font-size: 26rpx;
+  color: #f07c0d;
+}
+.storeName,.getOrderTime,.orderType{
+  margin-top: 26rpx;
+}
+.orderNum{
+  margin-left: 121rpx;
+  font-size: 36rpx;
+  color: #999;
+  position: relative;
+  top:3rpx;
+}
+.price{
+  font-size: 30rpx;
+  color: #f07c0d;
+  display: flex;
+  margin-top: 57rpx;
+}
+.orderDetail{
+  margin-left: 15rpx;
+  width: 131rpx;
+  height: 58rpx;
+  color: #fff;
+  border-radius: 8rpx;
+  background-color: #f07c0d;
+  text-align: center;
+  line-height: 58rpx;
+  position: relative;
+  top:-19rpx;
+  padding: 10rpx;
+}
+.cancleOrder{
+  margin-left: 207rpx;
+  width: 131rpx;
+  height: 58rpx;
+  color: #fff;
+  border-radius: 8rpx;
+  background-color: #f07c0d;
+  text-align: center;
+  line-height: 58rpx;
+  position: relative;
+  top:-19rpx;
+  padding: 10rpx;
+}

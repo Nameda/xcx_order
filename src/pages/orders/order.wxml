@@ -6,19 +6,21 @@
           <text>下单时间：{{item.orderTime}}</text>
           <text class="orderState">{{item.state}}</text>
         </view>
-        <view>
+        <view class="storeName">
           <text>门店名称：{{item.storeName}}</text>
         </view>
-        <view>
+        <view class="getOrderTime">
           <text>取单时间：{{item.getOrderTime}}</text>
         </view>
-        <view>
+        <view class="orderType">
           <text>订单类型：{{item.orderType}}</text>
           <text class="orderNum">取单号：{{item.orderNum}}</text>
         </view>
-        <view>
+        <view class="price">
           <text>{{item.price}}</text>
-          <button class="orderDetail">查看详情</button>
+          <view class="cancleOrder" wx:if="{{item.state !== '已确定'}}">取消订单</view>
+          <view wx:else></view>
+          <view class="orderDetail">查看详情</view>
         </view>
       </view>
     </block>
