@@ -9,9 +9,9 @@
       </block>  
     </swiper> 
   <!-- 搜索框 -->
-  <view class="searchBox">
+  <view class="searchBox" bindtap="onChangeAddress">
     <view class="seachIcon"><image src="../../imgs/index/search.png"></image></view>
-    <view class="seachTxt">成都市天府新区成都市天府新区成都市天府新区成都市天府新区</view>
+    <view class="seachTxt">{{address}}</view>
   </view>
   <!-- 门店列表 -->
   <view class="storeBox">

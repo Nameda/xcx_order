@@ -1,9 +1,14 @@
 //index.js
 //获取应用实例
 // import { getConfig,getArticleList } from '../../api/index'
+//引用腾讯地图API
+var QQMapWX = require('../../lib/qqmap-wx-jssdk.js');
+var qqmapsdk;
+
 const app = getApp()
 Page({
   data: {
+    address:'这是哪里',
     movies:[{
       url:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533273890882&di=ade7b6950e519d7fd7bb5c917903cda6&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201703%2F10%2F4927d1387af50334baff7de26a9da07e.jpg'
     },{
@@ -46,8 +51,41 @@ Page({
   bindViewTap() {
 
   },
-  onLoad() {
-    // getArticleList()
+  onLoad: function (options) {
+    /*判断是第一次加载还是从position页面返回
+    如果从position页面返回，会传递用户选择的地点*/
+    if (options.address != null && options.address != '') {
+      //设置变量 address 的值
+      this.setData({
+        address: options.address
+      });
+    } else {
+      // 实例化API核心类
+      qqmapsdk = new QQMapWX({
+        //此key需要用户自己申请
+        key: 'MNXBZ-G5TWD-GYF42-HHZJL-2W2J3-PVBX4'
+      });
+      var that = this;
+      // 调用接口
+      qqmapsdk.reverseGeocoder({
+        success: function (res) {
+          that.setData({
+            address: res.result.address
+          });
+        },
+        fail: function (res) {
+          //console.log(res);
+        },
+        complete: function (res) {
+          //console.log(res);
+        }
+      });
+    }
+  },
+  onChangeAddress:function(){
+    wx.navigateTo({
+      url: "/pages/position/position"
+    });
   },
   changeTab:function(event){
     var type = event.currentTarget.dataset['type'];
