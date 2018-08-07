@@ -25,8 +25,14 @@ Page({
             url: "/pages/index/index?address="+res.name
           });
       },
+      cancel:function(){
+        console.log(222)
+      },
       fail: function (err) {
-        console.log(err)
+        console.log(111)
+        wx.switchTab({
+          url: "/pages/index/index"
+        });
       }
     });
   }
