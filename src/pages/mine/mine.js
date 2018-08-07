@@ -7,7 +7,7 @@ Page({
     data: {
         userInfo: {},
         menuitems: [
-            { text: '我的优惠', url: '@', icon: '../../imgs/mine/coupons.png', iconEnd: '../../imgs/mine/next.png' },
+            { text: '我的优惠', url: '../coupons/coupon', icon: '../../imgs/mine/coupons.png', iconEnd: '../../imgs/mine/next.png' },
             { text: '', url: '../getPhone/getPhone', icon: '../../imgs/mine/phone.png', iconEnd: '../../imgs/mine/next.png' },
             { text: '平台须知', url: '../notice/notice', icon: '../../imgs/mine/notice.png', iconEnd: '../../imgs/mine/next.png' }
         ]

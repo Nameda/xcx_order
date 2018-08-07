@@ -1,0 +1,14 @@
+<view class="coupon-wrapper">
+  <block wx:for="{{coupons}}" wx:key="index">
+    <view class="coupon">
+        <view class="firstRow">
+          <text class="name">{{item.name}}</text>
+          <text class="price">{{item.price}}</text>
+        </view>
+        <view class="secondRow">
+          <text class="expireTime">有效期至：{{item.expireTime}}</text>
+          <text class="remark">{{item.remark}}</text>
+        </view>
+    </view>
+  </block>
+</view>

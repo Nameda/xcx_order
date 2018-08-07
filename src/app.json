@@ -6,6 +6,7 @@
     "pages/getPhone/getPhone",
     "pages/notice/notice",
     "pages/orders/order",
+    "pages/coupons/coupon",
     "pages/position/position"
   ],
   "window": {

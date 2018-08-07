@@ -1,0 +1,29 @@
+.coupon{
+  height: 210rpx;
+  margin: 15rpx 38rpx auto 38rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding-top: 32rpx;
+}
+.name{
+  font-size: 26rpx;
+  font-weight: bold;
+  margin-left: 60rpx
+}
+.price{
+  font-size: 32rpx;
+  color: rgb(255,51,47);
+  margin-left: 303rpx;
+}
+.secondRow{
+  display: flex;
+  margin-top: 50rpx;
+}
+.expireTime{
+  font-size: 22rpx;
+  margin-left: 60rpx;
+}
+.remark{
+  font-size: 22rpx;
+  margin-left: 216rpx;
+}
