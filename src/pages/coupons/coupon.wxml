@@ -1,14 +1,21 @@
 <view class="coupon-wrapper">
-  <block wx:for="{{coupons}}" wx:key="index">
-    <view class="coupon">
-        <view class="firstRow">
-          <text class="name">{{item.name}}</text>
-          <text class="price">{{item.price}}</text>
-        </view>
-        <view class="secondRow">
-          <text class="expireTime">有效期至：{{item.expireTime}}</text>
-          <text class="remark">{{item.remark}}</text>
-        </view>
+  <view wx:if="{{coupons.length==0}}" class="coupon">
+    <view class="leftCircle"></view>
+    <view class="nonCoupon">暂无未使用优惠券</view>
+    <view class="rightCircle"></view>
+  </view>
+  <block wx:else>
+    <view class="coupon" wx:for="{{coupons}}" wx:key="index">
+      <view class="leftCircle"></view>
+      <view class="firstRow">
+        <text class="name">{{item.name}}</text>
+        <text class="price">{{item.price}}</text>
+      </view>
+      <view class="secondRow">
+        <text class="expireTime">有效期至：{{item.expireTime}}</text>
+        <text class="remark">{{item.remark}}</text>
+      </view>
+      <view class="rightCircle"></view>
     </view>
   </block>
 </view>

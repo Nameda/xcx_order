@@ -46,7 +46,7 @@
 .price{
   font-size: 30rpx;
   color: #f07c0d;
-  display: flex;
+  /* display: flex; */
   margin-top: 57rpx;
 }
 .orderDetail{
@@ -63,7 +63,7 @@
   padding: 10rpx;
 }
 .cancleOrder{
-  margin-left: 207rpx;
+  /* margin-left: 207rpx; */
   width: 131rpx;
   height: 58rpx;
   color: #fff;
@@ -74,4 +74,9 @@
   position: relative;
   top:-19rpx;
   padding: 10rpx;
+}
+.operate{
+  float: right;
+  /* margin-right: 49rpx; */
+  display: flex;
 }

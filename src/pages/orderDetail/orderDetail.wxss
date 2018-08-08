@@ -1,0 +1,21 @@
+.orderTop{
+  height: 289rpx;
+  background-color: #fff;
+  margin: 64rpx 38rpx auto 38rpx;
+  border-radius: 8rpx;
+}
+.orderDetail{
+  height: 289rpx;
+  background-color: #fff;
+  margin: 46rpx 38rpx auto 38rpx;
+  border-radius: 8rpx;
+}
+.orderNo{
+  height: 289rpx;
+  background-color: #fff;
+  margin: 22rpx 38rpx auto 38rpx;
+  border-radius: 8rpx;
+}
+.operate{
+  margin: 24rpx 38rpx auto 38rpx;
+}

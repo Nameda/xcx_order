@@ -18,9 +18,11 @@
         </view>
         <view class="price">
           <text>{{item.price}}</text>
-          <view class="cancleOrder" wx:if="{{item.state !== '已确定'}}">取消订单</view>
-          <view wx:else></view>
-          <view class="orderDetail">查看详情</view>
+          <view class="operate">
+            <view class="cancleOrder" wx:if="{{item.state !== '已确定'}}">取消订单</view>
+            <view wx:else></view>
+            <view class="orderDetail" bindtap="goDetail">查看详情</view>
+          </view>
         </view>
       </view>
     </block>

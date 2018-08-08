@@ -1,0 +1,6 @@
+<view class="orderDetail-wrapper">
+  <view class="orderTop">新订单</view>
+  <view class="orderDetail">订单详情</view>
+  <view class="orderNo">新订单</view>
+  <view class="operate">新订单</view>
+</view>
