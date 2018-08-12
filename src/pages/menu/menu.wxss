@@ -1,21 +1,81 @@
 .container{
   height: 100%;
 }
-.header{
-  display: flex;
-  justify-content: space-around;
+.storeBox{
+  height: 120rpx;
+  width: 570rpx;
+  padding:40rpx 80rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  position: relative;
 }
-.header .title{
-  height: 70rpx;
-  width: 180rpx;
-  line-height: 70rpx;
-  font-size: 30rpx;
-  text-align: center;
+.storeBox .storeName{
+  color: #f07c0d;
 }
-.header .title.selected{
-  border-bottom: 7rpx solid #FFd161;
-  font-weight: 600;
+.storeBox .storeName .adIcon{
+  width:36rpx;
+  height:36rpx;
+  margin-right: 6rpx;
+  position: relative;
+  top:4rpx;
 }
+.storeBox .storeName .name{
+  display: inline-block;
+  width:500rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.storeBox .distance{
+  position: absolute;
+  right: 55rpx;
+  top: 46rpx;
+  color: #f07c0d;
+}
+.storeBox .address{
+  padding-top: 20rpx;
+  color: #000;
+  width: 600rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.storeBox .phone{
+  color: #8a8a8a;
+  padding-top: 20rpx;
+}
+.storeBox .rightBox{
+  position: absolute;
+  right: 80rpx;
+  bottom: 0;
+}
+.storeBox .rightBox .phoneIcon{
+  width: 35rpx;
+  height: 35rpx;
+}
+.storeBox .rightBox .guide{
+  display: inline-block;
+  font-size: 18rpx;
+  border:1rpx solid #f07c0d;
+  color: #a8a8a8;
+  padding:5rpx 8rpx;
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+  position: relative;
+  top:-8rpx;
+}
+
+
+
+
+
+
+
+
+
+
 .swiper{
   height: 1130rpx;
 }
@@ -31,7 +91,7 @@
 }
 .orderPage-sideBar{
   width: 150rpx;
-  height: 1130rpx;
+  /* height: 1130rpx; */
   background: #F4F4F4;
 }
 .menuList{

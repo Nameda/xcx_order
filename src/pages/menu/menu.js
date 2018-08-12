@@ -4,16 +4,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperTitle: [{
-      text: "点菜",
-      id: 1
-    },{
-      text: "评价",
-      id: 2
-    },{
-      text: "商家",
-      id: 3
-    }],
+    storeId:'',
+    storeInfo:{
+      name:'卡布达的奶茶店奶茶店奶茶店奶茶店奶茶店奶茶店奶茶店奶茶店奶茶店奶茶店奶茶店',
+      distance:'1.2',
+      address:'四川省成都市卡卡头的卡卡头的卡卡头的卡卡头的卡卡头的卡卡头的卡卡头的卡卡头的卡卡头的卡卡头的卡卡头',
+      phone:'15278907890',
+      longitude:'',
+      latitude:''
+    },
     menu:[],
     currentPage: 0,
     selected: 0,
@@ -21,6 +20,24 @@ Page({
     cost:0,
     pullBar: false
   },
+  //给商家打电话
+  callFun:function(){
+    wx.makePhoneCall({
+      phoneNumber: this.data.storeInfo.phone,
+      success: function(res) {
+        // success
+      }
+    })
+  },
+  //定位到商家
+  storeLocation:function(){
+    wx.openLocation({
+      latitude: 23.362490,
+      longitude: 116.715790,
+    })
+  },
+  
+
   pullBar: function () {
     this.setData({
       pullBar: !this.data.pullBar
@@ -68,6 +85,11 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    if(options.id){
+      this.setData({
+        storeId:options.id
+      })
+    }
     wx.request({
       url: "https://www.easy-mock.com/mock/596257bc9adc231f357c4664/restaurant/menu",
       method: "GET",

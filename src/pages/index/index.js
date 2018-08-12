@@ -21,26 +21,31 @@ Page({
     currentTab: 1,
     currentStore: 0,
     storeList: [{
+      storeId:11,
       name: '卡布达的奶茶店',
       distance: 0.1,
       address: '四川省成都市三江镇啦啦啦啦',
       isSelect: false
     }, {
+      storeId:22,      
       name: '卡布达的奶茶店',
       distance: 0.2,
       address: '四川省成都市三江镇啦啦啦啦',
       isSelect: true
     }, {
+      storeId:33, 
       name: '卡布达的奶茶店',
       distance: 0.3,
       address: '四川省成都市三江镇啦啦啦啦',
       isSelect: false
     }, {
+      storeId:44, 
       name: '卡布达的奶茶店',
       distance: 0.4,
       address: '四川省成都市三江镇啦啦啦啦',
       isSelect: true
     }, {
+      storeId:55, 
       name: '卡布达的奶茶店',
       distance: 0.5,
       address: '四川省成都市三江镇啦啦啦啦',
@@ -127,6 +132,13 @@ Page({
     var index = event.currentTarget.dataset['index'];
     this.setData({
       currentStore: index
+    })
+  },
+  goDetail:function(event){
+    var id = event.currentTarget.dataset['id'];
+    console.log(id);
+    wx.navigateTo({
+      url: "/pages/menu/menu?id="+id
     })
   }
 })

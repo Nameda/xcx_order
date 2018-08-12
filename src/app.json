@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/menu/menu",
+    "pages/index/index",
     "pages/mine/mine",
     "pages/getPhone/getPhone",
     "pages/notice/notice",
@@ -12,7 +12,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f1f1f1",
     "navigationBarTitleText": "卡布达的小程序",
     "navigationBarTextStyle": "black"
   },

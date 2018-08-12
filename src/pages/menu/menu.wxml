@@ -1,21 +1,21 @@
 <import src = "../common/orderPage.wxml"/>
-<import src = "../common/commentPage.wxml"/>
 <view class="container" disable-scroll="true">
-  <view class="header">
-    <block wx:for="{{swiperTitle}}" wx:key="">
-      <view class="title {{index==currentPage?'selected':''}}" data-index="{{index}}"
-      bindtap="turnPage">{{item.text}}</view>
-    </block> 
+  <view class="storeBox">
+      <view class="storeName">
+        <image src="../../imgs/index/adIcon.png" class="adIcon" ></image>
+        <view class="name">{{storeInfo.name}}</view>
+      </view>
+      <view class="distance">{{storeInfo.distance}}KM</view>
+      <view class="address">{{storeInfo.address}}</view>
+      <view class="phone">门店电话：{{storeInfo.phone}}</view>
+      <view class="rightBox">
+        <image src="../../imgs/order/phone.png" class="phoneIcon" bindtap="callFun"></image>
+        <view class="guide" bindtap="storeLocation">导航</view>
+      </view>
   </view>
-  
-  <swiper class="swiper" current="{{currentPage}} 
-  bindchange="turnTitle">
-    <swiper-item id="orderPage">
-      <template is="orderPage" data="{{menu,selected,howMuch,cost,pullBar}}"/>
-    </swiper-item>
-    <swiper-item id="commentPage">
-      <template is="commentPage" data="{{categoryList}}"/>
-    </swiper-item>
-    <swiper-item id="restaurantPage"></swiper-item>
-  </swiper>
+
+  <view id="orderPage">
+    <template is="orderPage" data="{{menu,selected,howMuch,cost}}"/>
+  </view>
+
 </view>

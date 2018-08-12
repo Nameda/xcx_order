@@ -32,8 +32,8 @@
         <view class="storeName"><image src="../../imgs/index/adIcon.png" class="adIcon"  wx:if="{{currentStore == index}}"></image>{{item.name}}</view>
         <view class="distance">{{item.distance}}KM</view>
         <view class="address">{{item.address}}</view>
-        <view class="showPart" wx:if="{{currentStore == index}}">
-          <view class="chooseTxt">选择饮品</view>
+        <view class="showPart" wx:if="{{currentStore == index}}" >
+          <view class="chooseTxt" bindtap="goDetail"  data-id="{{item.storeId}}">选择饮品</view>
           <image src="../../imgs/index/collect_select.png" wx:if="{{item.isSelect}}"></image>
           <image src="../../imgs/index/collect.png" wx:else></image>
         </view>
