@@ -1,6 +1,14 @@
 <view class="orderDetail-wrapper">
-  <view class="orderTop">新订单</view>
+  <view class="orderTop">
+    <view class="orderType">{{orderDetail.orderType}}</view>
+    <view class="getOrderNo"><view class="img"></view>取单号{{orderDetail.getOrderNo}}</view>
+    <view class="expectGetTime">预计取单时间：{{orderDetail.expectGetTime}}</view>
+  </view>
   <view class="orderDetail">订单详情</view>
   <view class="orderNo">新订单</view>
-  <view class="operate">新订单</view>
+  <view class="operate">
+    <view class="collectionStore btn">收藏门店</view>
+    <view class="cancleOrder  btn">取消订单</view>
+    <view class="returnList  btn">返回订单列表</view>
+  </view>
 </view>

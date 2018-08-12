@@ -1,21 +1,46 @@
 .orderTop{
-  height: 289rpx;
+  height: 298rpx;
   background-color: #fff;
   margin: 64rpx 38rpx auto 38rpx;
   border-radius: 8rpx;
+  box-shadow: 3rpx 3rpx #ccc;
+  font-size: 20rpx;
 }
 .orderDetail{
   height: 289rpx;
   background-color: #fff;
   margin: 46rpx 38rpx auto 38rpx;
   border-radius: 8rpx;
+  box-shadow: 3rpx 3rpx #ccc;
 }
 .orderNo{
   height: 289rpx;
   background-color: #fff;
   margin: 22rpx 38rpx auto 38rpx;
   border-radius: 8rpx;
+  box-shadow: 3rpx 3rpx #ccc;
 }
 .operate{
-  margin: 24rpx 38rpx auto 38rpx;
+  margin: 24rpx 28rpx auto 28rpx;
+  font-size: 30rpx;
+}
+.btn{
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius: 10rpx;
+  border:1rpx solid #f07c0d;
+  color: #f07c0d;
+  padding: 0 25rpx;
+}
+.collectionStore{
+  float: left;
+}
+.cancleOrder{
+  margin-left: 25rpx;
+  float: left;
+}
+.returnList{
+  background-color: #fff;
+  padding: 0 11rpx;
+  float: right;
 }
