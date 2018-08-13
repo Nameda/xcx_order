@@ -4,14 +4,72 @@
   margin: 64rpx 38rpx auto 38rpx;
   border-radius: 8rpx;
   box-shadow: 3rpx 3rpx #ccc;
-  font-size: 20rpx;
+  font-size: 26rpx;
+}
+.orderType{
+  color: #ccc;
+  margin-top: 26rpx;
+  text-align: center;
+}
+.img{
+  width: 106rpx;
+  height: 106rpx;
+  background-color: #f07c0d;
+  margin-left: 196rpx;
+}
+.getOrderNo{
+  margin-top: 46rpx;
+  height: 157rpx;
+  display: flex;
+}
+.getOrderText{
+  margin-left:62rpx;
+  color: #ccc;
+}
+.getNo{
+  margin-left:46rpx;
+  margin-top: 26rpx;
+  font-size: 40rpx;
+  color: #f07c0d;
+  font-weight: bold;
+}
+.expectGetTime{
+  width: 100%;
+  text-align:center;
+  margin-bottom:18rpx;
+  color: #f07c0d;
+  font-size: 30rpx;
+}
+.orderDetailBlock{
+  margin-top: 46rpx;
+  font-size: 40rpx;
+}
+.orderDetailText{
+  font-size: 30rpx;
+  margin-left: 49rpx;
 }
 .orderDetail{
-  height: 289rpx;
+  height: 314rpx;
   background-color: #fff;
-  margin: 46rpx 38rpx auto 38rpx;
+  margin: 18rpx 38rpx auto 38rpx;
   border-radius: 8rpx;
   box-shadow: 3rpx 3rpx #ccc;
+}
+.orderDetailFir{
+  display: flex;
+  justify-content: space-between;
+}
+.orderDetailFirL{
+  margin-left: 24rpx;
+}
+.goodsNameSize{
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+.goodsSpec{
+  font-size: 24rpx;
+  color: #ccc;
+  margin-top: 22rpx;
 }
 .orderNo{
   height: 289rpx;

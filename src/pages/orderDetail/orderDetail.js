@@ -10,6 +10,7 @@ Page({
             getOrderNo:'C088',
             expectGetTime:'2018-08-08 20:30:00',
             goodsNameSize:'珍珠奶茶/中杯',
+            goodsSpec:['常规','半塘','少冰'],
             goodsPrice:'￥10.0',
             goodsNum:'x1',
             goodsTotalPrice:'￥10.0',
