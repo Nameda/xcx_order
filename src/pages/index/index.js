@@ -1,10 +1,11 @@
 //index.js
-//获取应用实例
-// import { getConfig,getArticleList } from '../../api/index'
+//获取用户信息
+import { getUserInfo } from '../../api/index'
 //引用腾讯地图API
 var QQMapWX = require('../../lib/qqmap-wx-jssdk.js');
 var qqmapsdk;
-
+//引入 mock 
+// require('../../../_mock.js');
 const app = getApp()
 Page({
   data: {
@@ -53,6 +54,10 @@ Page({
     }]
   },
   onLoad: function (options) {
+    //获取用户信息
+    getUserInfo().then(res=>{
+      console.log(res)
+    })
     /*判断是第一次加载还是从position页面返回
     如果从position页面返回，会传递用户选择的地点*/
     if (options.address != null && options.address != '') {
