@@ -2,9 +2,9 @@
   height: 100%;
 }
 .storeBox{
-  height: 120rpx;
-  width: 570rpx;
-  padding:40rpx 80rpx;
+  height: 140rpx;
+  width: 610rpx;
+  padding:30rpx 40rpx;
   background: #fff;
   margin: 0 auto;
   border-radius: 10rpx;
@@ -31,7 +31,7 @@
 .storeBox .distance{
   position: absolute;
   right: 55rpx;
-  top: 46rpx;
+  top: 35rpx;
   color: #f07c0d;
 }
 .storeBox .address{
@@ -49,24 +49,53 @@
 .storeBox .rightBox{
   position: absolute;
   right: 80rpx;
-  bottom: 0;
+  bottom: 20rpx;
 }
 .storeBox .rightBox .phoneIcon{
   width: 35rpx;
   height: 35rpx;
 }
-.storeBox .rightBox .guide{
-  display: inline-block;
-  font-size: 18rpx;
-  border:1rpx solid #f07c0d;
-  color: #a8a8a8;
-  padding:5rpx 8rpx;
-  border-radius: 10rpx;
-  margin-left: 30rpx;
-  position: relative;
-  top:-8rpx;
+.storeBox .rightBox .addressIcon{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 20rpx;
 }
-
+.activityBox{
+  height: 35rpx;
+  line-height: 35rpx;
+  background: #fff;
+  border-radius: 5rpx;
+  margin:10rpx;
+  padding:10rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+}
+.activityBox .left{
+  display: flex;
+}
+.activityBox .left .activityIcon{
+  width:35rpx;
+  height: 35rpx;
+  margin:0 10rpx;
+}
+.activityBox .left .activeTxt{
+  width:500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.activityBox .right{
+  display: flex;
+}
+.activityBox .right .countTxt{
+ 
+}
+.activityBox .right .triangle{
+  width:30rpx;
+  height: 40rpx;
+  margin: 0 10rpx;
+}
 
 
 
@@ -91,8 +120,11 @@
 }
 .orderPage-sideBar{
   width: 150rpx;
-  /* height: 1130rpx; */
   background: #F4F4F4;
+  position: absolute;
+  top:280rpx;
+  bottom: 150rpx;
+  left:0;
 }
 .menuList{
   display: flex;
@@ -115,78 +147,92 @@
   top: 32rpx;
   height: 36rpx;
   width: 7rpx;
-  background: #FFD161;
+  background: #f07c0d;
 }
 .foodList{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background: #ECECEC;
+  width:600rpx;
+  position: absolute;
+  top:280rpx;
+  bottom: 100rpx;
+  right:0;
+  left: 150rpx;
 }
 .foodList .title{
   padding: 15rpx;
-  height: 25rpx;
-  line-height: 25rpx;
-  font-size: 25rpx;
+  height: 20rpx;
+  line-height: 20rpx;
+  font-size: 20rpx;
+  margin-bottom: 20rpx;
+  background: #e9e9e9;
+  color: #c2c2c2;
 }
 .food{
   position: relative;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   height: 170rpx;
-  border-bottom: 1rpx solid #ECECEC; 
+  border: 1rpx solid #ECECEC;
+  border-radius: 10rpx; 
+  overflow: hidden;
   background: white;
-}
-.food::before{
-  content: "";
-  width: 15rpx;
-  height: 100%;
-  left: -15rpx;
-  top: 0;
-  border: 1px solid white;
+  margin:10rpx 30rpx 15rpx 10rpx;
+  box-shadow: #e1e1e1 0 0 5rpx 5rpx;
 }
 .food .img{
-  width: 120rpx;
-  height: 120rpx;
+  width: 174rpx;
+  height: 174rpx;
 }
 .food-info{
   padding-left: 15rpx;
   line-height: 48rpx;
-  flex: 1;
+  width:250rpx;
 }
 .food .name{
   font-size: 30rpx;
+  width:350rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .food .sales{
+  height: 44rpx;
   font-size: 25rpx;
   color: #ACACAC;
 }
+.food .priceBox{
+  display: flex;
+  justify-content: space-between;
+  width:350rpx;
+}
 .food .price{
+  font-size: 20rpx;
+  color: #f07c0d;
+  font-weight: bold;
+}
+.food .price .price1{
   font-size: 30rpx;
-  color: red;
 }
 .food-numb{
   height: 40rpx;
   width: 130rpx;
   display: flex;
   justify-content: flex-end;
-  margin-top: 95rpx;
-  margin-right: 30rpx;
   line-height: 40rpx;
   font-size: 25rpx;
 }
 .food-numb .add,.food-numb .remove{
   width: 40rpx;
   height: 40rpx;
-  border-radius: 30rpx;
+  border-radius: 20rpx;
   text-align: center; 
 }
 .food-numb .add{
   font-size: 35rpx;
   line-height: 37rpx;
   font-weight: 700;
-  background: #FFD161;
+  background: #f07c0d;
+  color: #ffffff;
   margin-left: 15rpx;
 }
 .food-numb .remove{
@@ -197,8 +243,8 @@
   box-sizing: border-box;
   border: 2rpx;
   border-style: solid; 
-  border-color: #B0B0B0;
-  color: #B0B0B0;
+  border-color: #f07c0d;
+  color: #f07c0d;
 }
 .footer{
   display: flex;
@@ -250,8 +296,8 @@
    line-height: 40rpx;
 }
 .footer.active .pay{
-  background: #FFD161;
-  color: black;
+  background: #f07c0d;
+  color: #fff;
 }
 .commentPage-header{
   height: 190rpx;

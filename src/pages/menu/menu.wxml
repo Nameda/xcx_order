@@ -10,8 +10,19 @@
       <view class="phone">门店电话：{{storeInfo.phone}}</view>
       <view class="rightBox">
         <image src="../../imgs/order/phone.png" class="phoneIcon" bindtap="callFun"></image>
-        <view class="guide" bindtap="storeLocation">导航</view>
+        <image src="../../imgs/order/address.png" class="addressIcon" bindtap="storeLocation"></image>
       </view>
+  </view>
+
+  <view class="activityBox" wx-if="{{activityData.length}}">
+    <view class="left">
+        <image src="../../imgs/order/preference.png" class="activityIcon"></image>
+        <view class="activeTxt">{{activityData[0].text}}</view>
+    </view>
+    <view class="right">
+        <view class="countTxt">{{activityData.length}}个活动</view>
+        <image src="../../imgs/order/triangleDown.png" class="triangle"></image>
+    </view>
   </view>
 
   <view id="orderPage">

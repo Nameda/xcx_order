@@ -1,8 +1,6 @@
-Page({
 
-  /**
-   * 页面的初始数据
-   */
+import { getMenu,aitivity } from '../../api/index'
+Page({
   data: {
     storeId:'',
     storeInfo:{
@@ -13,6 +11,7 @@ Page({
       longitude:'',
       latitude:''
     },
+    activityData:[],
     menu:[],
 
     currentPage: 0,
@@ -30,37 +29,10 @@ Page({
         storeId:options.id
       })
     }
+    //获取 优惠信息
+    this.getActivityData();
     //获取菜单
-    wx.request({
-      url: "https://www.easy-mock.com/mock/596257bc9adc231f357c4664/restaurant/menu",
-      method: "GET",
-      success: function (res) {
-        that.setData({
-          menu: res.data,
-        })
-      }
-    });
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+   this.getMenu()
   },
   //给商家打电话
   callFun:function(){
@@ -76,6 +48,24 @@ Page({
     wx.openLocation({
       latitude: 23.362490,
       longitude: 116.715790,
+    })
+  },
+  //获取优惠信息
+  getActivityData:function(){
+    aitivity().then(res=>{
+      if(res.code == 200){
+        this.setData({
+          activityData:res.data
+        })
+      }
+    })
+  },
+  //获取菜单
+  getMenu:function(){
+    getMenu().then(res=>{
+      this.setData({
+        menu:res.data
+      })
     })
   },
   //加入到购物车
