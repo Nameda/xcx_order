@@ -1,6 +1,38 @@
 <view class="orderDetail-wrapper">
-  <view class="orderTop">新订单</view>
-  <view class="orderDetail">订单详情</view>
+  <view class="orderTop">
+    <view class="orderType">{{orderDetail.orderType}}</view>
+    <view class="getOrderNo">
+      <view class="img"></view>
+      <view class="getOrderNoBlock">
+        <view class="getOrderText">取单号</view>
+        <view class="getNo">{{orderDetail.getOrderNo}}</view>
+      </view>
+    </view>
+    <view class="expectGetTime">预计取单时间：{{orderDetail.expectGetTime}}</view>
+  </view>
+  <view class="orderDetailBlock">
+    <view class="orderDetailText">订单详情</view>
+    <view class="orderDetail">
+      <view class="orderDetailFir">
+        <view class="orderDetailFirL">
+          <view class="goodsNameSize">{{orderDetail.goodsNameSize}}</view>
+          <view class="goodsSpec">
+            <block wx:for="{{orderDetail.goodsSpec}}" wx:key="index">{{index==0 ? '':'+'}}{{item}}</block>
+          </view>
+        </view>
+        <view>{{orderDetail.goodsPrice}}</view>
+        <view>{{orderDetail.goodsNum}}</view>
+      </view>
+      <view class="orderDetailSec"></view>
+      <view class="orderDetailThi"></view>
+      <view class="orderDetailFou"></view>
+      
+    </view>
+  </view>
   <view class="orderNo">新订单</view>
-  <view class="operate">新订单</view>
+  <view class="operate">
+    <view class="collectionStore btn">收藏门店</view>
+    <view class="cancleOrder  btn">取消订单</view>
+    <view class="returnList  btn">返回订单列表</view>
+  </view>
 </view>
