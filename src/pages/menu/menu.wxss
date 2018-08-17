@@ -253,6 +253,7 @@
   left: 0;
   bottom:0;
   height: 100rpx;
+  background: #fff;
 }
 .footer .img{
   position: absolute;
@@ -260,10 +261,23 @@
   width: 90rpx;
   border-radius: 100rpx;
   left: 20rpx;
-  top: -45rpx;
+  top: 0rpx;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.footer .img .count{
+  width:40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  background: #f07c0d;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  left:0;
+  font-size: 24rpx;
 }
 #orderPage .howMuch{
   position: relative;
@@ -277,16 +291,18 @@
   width: 200rpx;
   text-align: center;
   line-height: 100rpx;
-  color: white;
+  color: #CCCCCC;
   font-size: 30rpx;
-  background: #CCCCCC;
+}
+.footer .free{
+  color: #ccc;
 }
 #orderPage .cost{
-  margin-top: 10rpx;
-  color: red;
-  font-size: 50rpx;
-  line-height: 50rpx;
-  height: 50rpx;
+  color: #333;
+  font-weight: bold;
+  font-size: 35rpx;
+  line-height: 100rpx;
+  height: 100rpx;
   width: 100rpx;
 }
 .footer.active .free{
@@ -296,8 +312,7 @@
    line-height: 40rpx;
 }
 .footer.active .pay{
-  background: #f07c0d;
-  color: #fff;
+  color: #f07c0d;
 }
 .commentPage-header{
   height: 190rpx;

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/postOrder/postOrder",
     "pages/menu/menu",
     "pages/index/index",
     "pages/mine/mine",

@@ -13,11 +13,9 @@ Page({
     },
     activityData:[],
     menu:[],
-
-    currentPage: 0,
     selected: 0,
-    howMuch: 12,
-    cost:0
+    cost:0,
+    count:0
   },
     /**
    * 生命周期函数--监听页面加载
@@ -71,20 +69,25 @@ Page({
   //加入到购物车
   addToTrolley: function (e) {
     var info = this.data.menu;
+    var num = this.data.count+1;
     info[this.data.selected].menuContent[e.currentTarget.dataset.index].numb++;
     this.setData({
       cost: this.data.cost+this.data.menu[this.data.selected].menuContent[e.currentTarget.dataset.index].price,
       menu: info,
+      count: num
     })
+    console.log(this.data.count);
   },
   //已选商品 减1
   removeFromTrolley: function (e) {
     var info = this.data.menu;
+    var num = this.data.count-1;
     if (info[this.data.selected].menuContent[e.currentTarget.dataset.index].numb!=0){
       info[this.data.selected].menuContent[e.currentTarget.dataset.index].numb--;
       this.setData({
         cost: this.data.cost - this.data.menu[this.data.selected].menuContent[e.currentTarget.dataset.index].price,
         menu: info,
+        count: num
       })
     }
   },

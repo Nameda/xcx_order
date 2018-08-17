@@ -26,7 +26,7 @@
   </view>
 
   <view id="orderPage">
-    <template is="orderPage" data="{{menu,selected,howMuch,cost}}"/>
+    <template is="orderPage" data="{{menu,selected,howMuch,cost,count}}"/>
   </view>
 
 </view>

@@ -38,12 +38,13 @@
     </scroll-view>
     <view class="footer {{cost!=0?'active':''}}">
       <view class="howMuch">
-        <view class="img" style="background:{{cost!=0?'#f07c0d':'#E7E7E7'}};">
+        <view class="img">
+          <view class="count" hidden="{{count==0}}">{{count}}</view>
           <image src="../../imgs/order/trolley.png" style="width:60rpx;height:60rpx;"></image>
         </view>
         <view class="cost" hidden="{{cost==0}}">￥{{cost}}</view>
-        <view class="free">免配送费</view>
+        <view class="free" hidden="{{cost != 0}}" >购物车是空的哦~</view>
       </view>
-      <view class="pay">{{cost!=0?'去结算':'15元起送'}}</view>      
+      <view class="pay">去结算 > </view>      
     </view>
 </template>

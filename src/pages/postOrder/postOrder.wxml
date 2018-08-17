@@ -1,0 +1,14 @@
+<view>
+    提交详情
+    <view class="footer {{cost!=0?'active':''}}">
+      <view class="howMuch">
+        <view class="img">
+          <view class="count" hidden="{{count==0}}">{{count}}</view>
+          <image src="../../imgs/order/trolley.png" style="width:60rpx;height:60rpx;"></image>
+        </view>
+        <view class="cost" hidden="{{cost==0}}">￥{{cost}}</view>
+        <view class="free" hidden="{{cost != 0}}" >购物车是空的哦~</view>
+      </view>
+      <view class="pay">去结算 > </view>      
+    </view>
+</view>

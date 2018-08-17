@@ -1,0 +1,68 @@
+.footer{
+    display: flex;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom:0;
+    height: 100rpx;
+    background: #fff;
+  }
+  .footer .img{
+    position: absolute;
+    height: 90rpx;
+    width: 90rpx;
+    border-radius: 100rpx;
+    left: 20rpx;
+    top: 0rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .img .count{
+    width:40rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    color: #fff;
+    background: #f07c0d;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left:0;
+    font-size: 24rpx;
+  }
+  .footer .howMuch{
+    position: relative;
+    flex: 1;
+    font-size: 28rpx;
+    background: white;
+    line-height: 100rpx;
+    padding-left: 130rpx;
+  }
+  .footer .pay{
+    width: 200rpx;
+    text-align: center;
+    line-height: 100rpx;
+    color: #CCCCCC;
+    font-size: 30rpx;
+  }
+  .footer .free{
+    color: #ccc;
+  }
+  .footer .cost{
+    color: #333;
+    font-weight: bold;
+    font-size: 35rpx;
+    line-height: 100rpx;
+    height: 100rpx;
+    width: 100rpx;
+  }
+  .footer.active .free{
+     font-size: 25rpx;
+     width: 100rpx;
+     height: 40rpx;
+     line-height: 40rpx;
+  }
+  .footer.active .pay{
+    color: #f07c0d;
+  }
