@@ -1,3 +1,54 @@
+.getAddress{
+  background: #fff;
+  border:1rpx solid #dfdfdf;
+  border-radius: 15rpx;
+  font-size: 30rpx;
+  margin:30rpx 38rpx;
+  padding: 30rpx;
+  display: flex;
+}
+.getAddress .title{
+  flex-shrink:0;
+  padding-right: 20rpx;
+}
+.getAddress .address{
+  color: #929292;
+  font-size: 28rpx;
+}
+
+.orderListBox{
+  font-size: 30rpx;
+  margin:0rpx 38rpx;
+  margin-top: 0;
+}
+.orderListBox .title{
+  padding-bottom: 14rpx;
+  padding-left: 10rpx;
+}
+.orderListBox .orderList{
+  background: #fff;
+  border:1rpx solid #dfdfdf;
+  border-radius: 15rpx;
+  padding:0 30rpx;
+}
+.orderListBox .orderList .list{
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #dcdcdc;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+}
+.orderListBox .list .intro{
+  font-size: 22rpx;
+  color: #929292;
+  padding-top: 6rpx;
+}
+.orderListBox .list:last-child{
+  border:0;
+}
+
 .footer{
     display: flex;
     position: absolute;

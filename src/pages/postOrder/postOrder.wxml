@@ -1,5 +1,23 @@
 <view>
-    提交详情
+    <view class="getAddress">
+      <view class="title">取单地址</view>
+      <view class="address">四川省成都市双流区华阳镇某个地方某个街道某号某楼某个卡卡某个卡卡某个卡卡某个卡卡某个卡卡</view>
+    </view>
+
+    <view class="orderListBox">
+      <view class="title">订单详情</view>
+      <view class="orderList">
+        <view class="list" wx:for="{{lists}}">
+          <view>
+            <view>珍珠奶茶大杯</view> 
+            <view class="intro">加冰/少糖/多珍珠</view>
+          </view>
+          <view>￥12</view>
+          <view> <text class="numIcon">X</text>1</view>
+        </view>
+      </view>
+    </view>
+
     <view class="footer {{cost!=0?'active':''}}">
       <view class="howMuch">
         <view class="img">
