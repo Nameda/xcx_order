@@ -7,7 +7,7 @@
     <view class="orderListBox">
       <view class="title">订单详情</view>
       <view class="orderList">
-        <view class="list" wx:for="{{lists}}">
+        <view class="list" wx:for="{{lists}}" wx:key="{{index}}">
           <view>
             <view>珍珠奶茶大杯</view> 
             <view class="intro">加冰/少糖/多珍珠</view>
@@ -15,6 +15,22 @@
           <view>￥12</view>
           <view> <text class="numIcon">X</text>1</view>
         </view>
+      </view>
+    </view>
+
+    <view class="rebateBox">
+      <view>优惠详情</view>
+      <view class="rebateLists">
+        <view class="list" wx:for="{{lists}}" wx:key="{{index}}">
+          <view class="name">
+            <view class="rebateIcon">特</view>
+            <view>超级好喝的奶茶一杯</view>
+          </view>
+          <view class="price">-￥3.0</view>
+        </view>
+      </view>
+      <view class="couponBox">
+      
       </view>
     </view>
 

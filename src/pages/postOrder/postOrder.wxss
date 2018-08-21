@@ -19,7 +19,6 @@
 .orderListBox{
   font-size: 30rpx;
   margin:0rpx 38rpx;
-  margin-top: 0;
 }
 .orderListBox .title{
   padding-bottom: 14rpx;
@@ -47,6 +46,21 @@
 }
 .orderListBox .list:last-child{
   border:0;
+}
+
+.rebateBox{
+  font-size: 30rpx;
+  margin:20rpx 38rpx;
+}
+.rebateBox .title{
+  padding-bottom: 14rpx;
+  padding-left: 10rpx;
+}
+.rebateBox .rebateLists{
+  background: #fff;
+  border:1rpx solid #dfdfdf;
+  border-radius: 15rpx;
+  padding:0 30rpx;
 }
 
 .footer{
