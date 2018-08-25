@@ -14,6 +14,7 @@ Page({
             goodsPrice:'￥10.0',
             goodsNum:'x1',
             goodsTotalPrice:'￥10.0',
+            discount:'￥0.0',
             orderTotalPrice:'￥10.0',
             orderNo:'WD10731193321240577',
             orderTime:'2018-07-31 19:32:02',

@@ -20,16 +20,34 @@
             <block wx:for="{{orderDetail.goodsSpec}}" wx:key="index">{{index==0 ? '':'+'}}{{item}}</block>
           </view>
         </view>
-        <view>{{orderDetail.goodsPrice}}</view>
-        <view>{{orderDetail.goodsNum}}</view>
+        <view class="goodsPrice">{{orderDetail.goodsPrice}}</view>
+        <view class="goodsNum">{{orderDetail.goodsNum}}</view>
       </view>
-      <view class="orderDetailSec"></view>
-      <view class="orderDetailThi"></view>
-      <view class="orderDetailFou"></view>
-      
+      <view class="orderDetailSec">
+        <view class="totalPriceText">商品总价</view>
+        <view class="totalPrice">{{orderDetail.goodsTotalPrice}}</view>
+      </view>
+      <view class="orderDetailThi">
+        <view class="discountText">优惠</view>
+        <view class="discount">{{orderDetail.discount}}</view>
+      </view>
+      <view class="orderDetailFou">
+        <view class="orderTotalPriceText">订单总额</view>
+        <view class="orderTotalPrice">{{orderDetail.orderTotalPrice}}</view>
+      </view>
     </view>
   </view>
-  <view class="orderNo">新订单</view>
+  <view class="orderNo">
+    <view class="orderFir">
+        <view class="orderNoText">订单编号：<text class="orderNoC">{{orderDetail.orderNo}}</text></view>
+    </view>
+    <view class="orderSec">
+        <view class="makeTimeText">下单时间：<text class="makeTime">{{orderDetail.orderTime}}</text></view>
+    </view>
+    <view class="orderThi">
+        <view class="addrText">门店地址：</view><view class="addr">{{orderDetail.storeAddress}}</view>
+    </view>
+  </view>
   <view class="operate">
     <view class="collectionStore btn">收藏门店</view>
     <view class="cancleOrder  btn">取消订单</view>

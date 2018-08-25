@@ -8,7 +8,7 @@
 }
 .orderType{
   color: #ccc;
-  margin-top: 26rpx;
+  padding-top: 10rpx;
   text-align: center;
 }
 .img{
@@ -18,7 +18,7 @@
   margin-left: 196rpx;
 }
 .getOrderNo{
-  margin-top: 46rpx;
+  margin-top: 25rpx;
   height: 157rpx;
   display: flex;
 }
@@ -58,25 +58,95 @@
 .orderDetailFir{
   display: flex;
   justify-content: space-between;
+  font-size: 30rpx;
+  border-bottom:1rpx solid #dcdcdc;
+  margin:0 24rpx;
 }
 .orderDetailFirL{
+  
+}
+.orderDetailSec{
+  width: 673rpx;
+  height: 34rpx;
+  font-size: 24rpx;
+  margin-top: 34rpx;
+  color: #ccc;
+}
+.orderDetailThi{
+  width: 673rpx;
+  height: 35rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.orderDetailFou{
+  width: 673rpx;
+  font-size: 30rpx;
+  margin-top:29rpx;
+}
+.totalPriceText{
+  float: left;
   margin-left: 24rpx;
 }
+.discountText{
+  float: left;
+  margin-left: 24rpx;
+}
+.orderTotalPriceText{
+  float: left;
+  margin-left: 24rpx;
+}
+.orderTotalPrice{
+  float: right;
+  margin-right: 24rpx;
+}
+.totalPrice{
+  float: right;
+  margin-right: 25rpx;
+}
+.discount{
+  float: right;
+  margin-right: 25rpx;
+}
 .goodsNameSize{
-  font-size: 30rpx;
   margin-top: 30rpx;
 }
 .goodsSpec{
   font-size: 24rpx;
   color: #ccc;
-  margin-top: 22rpx;
+  margin-top:10rpx;
+  margin-bottom:10rpx;
+}
+.goodsPrice{
+  margin-top:45rpx;
+}
+.goodsNum{
+  margin-top:45rpx;
 }
 .orderNo{
-  height: 289rpx;
   background-color: #fff;
   margin: 22rpx 38rpx auto 38rpx;
   border-radius: 8rpx;
   box-shadow: 3rpx 3rpx #ccc;
+  padding: 30rpx;
+  font-size: 27rpx;
+  color: #999;
+}
+.orderFir{
+  height: 62rpx;
+}
+.orderSec{
+  height: 62rpx;
+}
+.orderThi{
+  height: 62rpx;
+}
+.addrText{
+  float: left;
+}
+.addr{
+  float: right;
+  width:488rpx;
+  text-decoration: underline;
 }
 .operate{
   margin: 24rpx 28rpx auto 28rpx;
